@@ -28,16 +28,10 @@ public class Adherent implements Serializable{
 	@Column
 	private String prenom;
 	@Column
-	private String noLicence;
-	@Column
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date dateDeNaissance;
-	@Column
-	private String categorie;
+	private String dateDeNaissance;
 	@Column
 	private String adresse;
 	@Column
-	@Pattern(regexp="^[0-9]{5}$")
 	private String codePostal;
 	@Column
 	private String commune;
@@ -47,10 +41,7 @@ public class Adherent implements Serializable{
 	private String telPortable;
 	@Column
 	private String mail;
-	@Column
-	@CreationTimestamp
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date dateAdhesion;
+	
 	
 	
 	
@@ -74,10 +65,10 @@ public class Adherent implements Serializable{
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
 	}
-	public Date getDateDeNaissance() {
+	public String getDateDeNaissance() {
 		return dateDeNaissance;
 	}
-	public void setDateDeNaissance(Date dateDeNaissance) {
+	public void setDateDeNaissance(String dateDeNaissance) {
 		this.dateDeNaissance = dateDeNaissance;
 	}
 	public String getAdresse() {
@@ -116,7 +107,7 @@ public class Adherent implements Serializable{
 	public void setMail(String mail) {
 		this.mail = mail;
 	}
-	public String getNoLicence() {
+	/*public String getNoLicence() {
 		return noLicence;
 	}
 	public void setNoLicence(String noLicence) {
@@ -128,12 +119,12 @@ public class Adherent implements Serializable{
 	public void setCategorie(String categorie) {
 		this.categorie = categorie;
 	}
-	public Date getDateAdhesion() {
+	public String getDateAdhesion() {
 		return dateAdhesion;
 	}
-	public void setDateAdhesion(Date dateAdhesion) {
+	public void setDateAdhesion(String dateAdhesion) {
 		this.dateAdhesion = dateAdhesion;
-	}
+	}*/
 	
 
 }

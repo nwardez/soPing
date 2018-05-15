@@ -74,9 +74,9 @@ public class AdherentController {
 		adherent.setPrenom(detailAdherent.getPrenom());
 		adherent.setTelDomicile(detailAdherent.getTelDomicile());
 		adherent.setTelPortable(detailAdherent.getTelPortable());
-		adherent.setCategorie(detailAdherent.getCategorie());
+		/*adherent.setCategorie(detailAdherent.getCategorie());
 		adherent.setNoLicence(detailAdherent.getNoLicence());
-		adherent.setDateAdhesion(detailAdherent.getDateAdhesion());
+		adherent.setDateAdhesion(detailAdherent.getDateAdhesion());*/
 		
 		Adherent majAdherent = adherentService.editerAdherent(adherentId, adherent);
 		

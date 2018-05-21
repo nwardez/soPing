@@ -41,6 +41,8 @@ public class Adherent implements Serializable{
 	private String telPortable;
 	@Column
 	private String mail;
+	@Column
+	private String noLicence;
 	
 	
 	
@@ -125,6 +127,13 @@ public class Adherent implements Serializable{
 	public void setDateAdhesion(String dateAdhesion) {
 		this.dateAdhesion = dateAdhesion;
 	}*/
+	public String getNoLicence() {
+		return noLicence;
+	}
+	public void setNoLicence(String noLicence) {
+		this.noLicence = noLicence;
+	}
+	
 	
 
 }

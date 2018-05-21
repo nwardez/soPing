@@ -74,6 +74,7 @@ public class AdherentController {
 		adherent.setPrenom(detailAdherent.getPrenom());
 		adherent.setTelDomicile(detailAdherent.getTelDomicile());
 		adherent.setTelPortable(detailAdherent.getTelPortable());
+		adherent.setNoLicence(detailAdherent.getNoLicence());
 		/*adherent.setCategorie(detailAdherent.getCategorie());
 		adherent.setNoLicence(detailAdherent.getNoLicence());
 		adherent.setDateAdhesion(detailAdherent.getDateAdhesion());*/

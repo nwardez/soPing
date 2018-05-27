@@ -21,7 +21,7 @@ import org.hibernate.annotations.CreationTimestamp;
 public class Adherent implements Serializable{
 	
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	@Column
 	private String nom;

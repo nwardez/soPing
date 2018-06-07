@@ -1,20 +1,32 @@
 package co.simplon.assoc.model;
 
 import java.io.Serializable;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Entity
-@Table(name="saisons")
+@Table(name="saison")
+@EntityListeners(AuditingEntityListener.class)
 public class Saison implements Serializable{
 
 	@Id
 	@GeneratedValue
 	private Long id;
+	@OneToMany(mappedBy="saison", cascade = CascadeType.ALL)
+	@JsonBackReference
+	private Set<Adhesion> listeAdhesions;
 	@Column
 	private String libelle;
 	@Column
@@ -78,5 +90,11 @@ public class Saison implements Serializable{
 	}
 	public void setMontantLicenceSenior(double montantLicenceSenior) {
 		this.montantLicenceSenior = montantLicenceSenior;
+	}
+	public Set<Adhesion> getListeAdhesions() {
+		return listeAdhesions;
+	}
+	public void setListeAdhesions(Set<Adhesion> listeAdhesions) {
+		this.listeAdhesions = listeAdhesions;
 	}
 }

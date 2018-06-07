@@ -2,6 +2,8 @@ package co.simplon.assoc.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -35,7 +37,7 @@ public class AdherentController {
 	}
 	
 	@PostMapping("/adherent")
-	public Adherent createAdherent(@RequestBody Adherent adherent) {
+	public Adherent createAdherent(@Valid @RequestBody Adherent adherent) {
 		return adherentService.creerAdherent(adherent);
 	}
 	

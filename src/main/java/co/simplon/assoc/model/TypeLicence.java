@@ -13,7 +13,6 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 @Entity
 @Table(name="typeLicence")
-@EntityListeners(AuditingEntityListener.class)
 public class TypeLicence implements Serializable{
 	
 	@Id

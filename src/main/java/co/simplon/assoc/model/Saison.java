@@ -18,7 +18,6 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Entity
 @Table(name="saison")
-@EntityListeners(AuditingEntityListener.class)
 public class Saison implements Serializable{
 
 	@Id
